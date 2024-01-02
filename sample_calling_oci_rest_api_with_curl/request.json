@@ -1,0 +1,8 @@
+{
+  "compartmentId"        : "XXXXXXXXXX",
+  "displayName"          : "Live Demo",
+  "dbName"               : "AhmedDB",
+  "adminPassword"        : "Kobe_24_24_24",
+  "cpuCoreCount"         : 1,
+  "dataStorageSizeInTBs" : 1
+}
