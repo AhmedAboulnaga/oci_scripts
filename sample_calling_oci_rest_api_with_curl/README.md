@@ -9,21 +9,22 @@ Prior to invoking 'createdb.sh', there is a section where a number of values nee
 ssh-keygen -t rsa -f oci -C oracle
 ```
 4. Use openssl to view the X.509 MD5 PEM certificate fingerprint (this will be added to 'createdb.sh'):
-
+```
 openssl rsa -pubout -outform DER -in oci | openssl md5 -c
-
+```
 5. Use openssl to get the public key from the private key in PEM format (OCI requires that the public key is imported in PEM format):
-
+```
 openssl rsa -in oci -pubout
-
+```
 6. Add the public key from step #5 to the OCI user's API key on the OCI console.
 
 7. Update the customizable values in 'createdb.sh':
-
+```
 tenancy_ocid="XXXXXXXXXX"
 user_ocid="XXXXXXXXXX"
 fingerprint="XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX"
-
+```
 8. Run the script:
-
+```
 ./createdb.sh
+```
