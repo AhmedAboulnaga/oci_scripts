@@ -5,9 +5,9 @@ Prior to invoking 'createdb.sh', there is a section where a number of values nee
 2. Get the User OCID from the OCI console (this will be added to 'createdb.sh').
 
 3. Create a public/private key pair on your Linux server (the public key will eventually be added as an 'API Key' to the OCI account in step #6; the private key will be used by the script):
-
+```
 ssh-keygen -t rsa -f oci -C oracle
-
+```
 4. Use openssl to view the X.509 MD5 PEM certificate fingerprint (this will be added to 'createdb.sh'):
 
 openssl rsa -pubout -outform DER -in oci | openssl md5 -c
